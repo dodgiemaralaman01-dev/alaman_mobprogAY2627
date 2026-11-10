@@ -1,3 +1,7 @@
+# Dodgie Mar U. Alaman
+# 2023-100279
+# INF 241
+
 # Lab Activity 0: Flutter Project Setup
 
 ## Discussion
