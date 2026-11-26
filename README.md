@@ -33,7 +33,7 @@ Through this implementation, I learned how to use conditional rendering in Flutt
 
 # Lab Activity 2A: List Widgets
 
-# Laboratory Discussion
+## Discussion
 
 I built the posts and notifications from structured lists so each item’s content can be managed separately from its layout. The newsfeed uses a post list rendered with ListView.builder. Each post has its own author, text, like count, date, and image setting. This makes it straightforward to add posts without repeating the card layout. Notifications are also stored as a list and displayed with ListView.separated, which keeps their layout consistent and adds separators automatically.
 
