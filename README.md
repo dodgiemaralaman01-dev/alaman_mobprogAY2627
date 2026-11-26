@@ -1,6 +1,7 @@
 # Dodgie Mar U. Alaman
-# 2023-100279
-# INF 241
+## 2023-100279
+## BSIT-MWA - INF 241
+## CTMOBPGL - Mobile Programming
 
 # Lab Activity 0: Flutter Project Setup
 
