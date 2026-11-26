@@ -35,7 +35,7 @@ Through this implementation, I learned how to use conditional rendering in Flutt
 
 # Laboratory Discussion
 
-I built the posts and notifications from structured lists so each item’s content can be managed separately from its layout. The newsfeed uses a post list rendered with `ListView.builder`. Each post has its own author, text, like count, date, and image setting. This makes it straightforward to add posts without repeating the card layout. Notifications are also stored as a list and displayed with `ListView.separated`, which keeps their layout consistent and adds separators automatically.
+I built the posts and notifications from structured lists so each item’s content can be managed separately from its layout. The newsfeed uses a post list rendered with ListView.builder. Each post has its own author, text, like count, date, and image setting. This makes it straightforward to add posts without repeating the card layout. Notifications are also stored as a list and displayed with ListView.separated, which keeps their layout consistent and adds separators automatically.
 
 I completed the enhancements by making the AppBar title follow the selected page, adding a Profile item and screen to the bottom navigation, renaming the app to **Den Den Mushi Book**, and applying an ocean-blue, pirate-red, straw-hat-gold, and parchment color palette.
 
