@@ -18,7 +18,7 @@ After running the application, the Android emulator successfully displayed the "
 Overall, this activity helped me understand the process of creating, configuring, and running a Flutter application. I also learned that resolving development environment issues, especially missing dependencies such as the Android NDK, is important for successful application development. For future activities, I will make sure that the Flutter SDK, Android SDK, NDK components, and emulator are properly configured before building and running my projects.
 
 
-# Lab Activity 1A: File Structuring | Design Pattern
+# Lab Activity 1: File Structuring | Design Pattern
 
 ## Discussion
 
