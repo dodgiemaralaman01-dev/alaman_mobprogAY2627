@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../constants.dart';
 import 'custom_text.dart';
 import 'post_action_button.dart';
 
@@ -26,12 +27,16 @@ class NewsFeedCard extends StatelessWidget {
   Widget _buildAvatar({required double radius}) {
     final imageAsset = profileImageAsset;
     if (imageAsset == null) {
-      return CircleAvatar(radius: radius, child: const Icon(Icons.person));
+      return CircleAvatar(
+        radius: radius,
+        backgroundColor: FB_PLACEHOLDER,
+        child: const Icon(Icons.person, color: FB_PRIMARY),
+      );
     }
 
     return CircleAvatar(
       radius: radius,
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: FB_PLACEHOLDER,
       child: ClipOval(
         child: Image.asset(
           imageAsset,
@@ -39,7 +44,7 @@ class NewsFeedCard extends StatelessWidget {
           height: radius * 2,
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) =>
-              const Icon(Icons.person),
+              const Icon(Icons.person, color: FB_PRIMARY),
         ),
       ),
     );
@@ -48,7 +53,7 @@ class NewsFeedCard extends StatelessWidget {
   Widget _buildPostImage() {
     final imageAsset = postImageAsset;
     final placeholder = ColoredBox(
-      color: Colors.grey.shade200,
+      color: FB_PLACEHOLDER,
       child: SizedBox(
         width: double.infinity,
         height: ScreenUtil().setHeight(220),
@@ -56,7 +61,7 @@ class NewsFeedCard extends StatelessWidget {
           child: Icon(
             Icons.image_not_supported_outlined,
             size: 48,
-            color: Colors.grey,
+            color: FB_SECONDARY,
           ),
         ),
       ),
@@ -84,6 +89,7 @@ class NewsFeedCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(ScreenUtil().setSp(10)),
+      color: FB_SURFACE,
       child: Padding(
         padding: EdgeInsets.all(ScreenUtil().setSp(10)),
         child: Column(
@@ -100,7 +106,7 @@ class NewsFeedCard extends StatelessWidget {
                     CustomText(
                       text: userName,
                       fontSize: ScreenUtil().setSp(15),
-                      color: Colors.black,
+                      color: FB_DARK_PRIMARY,
                       fontWeight: FontWeight.bold,
                     ),
                     Row(
@@ -110,12 +116,12 @@ class NewsFeedCard extends StatelessWidget {
                         CustomText(
                           text: date,
                           fontSize: ScreenUtil().setSp(12),
-                          color: Colors.grey,
+                          color: FB_MUTED,
                         ),
                         SizedBox(width: ScreenUtil().setWidth(3)),
                         Icon(
                           Icons.public,
-                          color: Colors.grey,
+                          color: FB_MUTED,
                           size: ScreenUtil().setSp(15),
                         ),
                       ],
@@ -133,7 +139,7 @@ class NewsFeedCard extends StatelessWidget {
             CustomText(
               text: postContent,
               fontSize: ScreenUtil().setSp(12),
-              color: Colors.black,
+              color: FB_DARK_PRIMARY,
             ),
 
             SizedBox(height: ScreenUtil().setHeight(5)),
@@ -176,7 +182,7 @@ class NewsFeedCard extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     height: ScreenUtil().setHeight(32),
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: FB_TEXT_COLOR_WHITE,
                       borderRadius: BorderRadius.all(
                         Radius.circular(ScreenUtil().setSp(16)),
                       ),
@@ -184,7 +190,7 @@ class NewsFeedCard extends StatelessWidget {
                     child: CustomText(
                       text: 'Write a comment...',
                       fontSize: ScreenUtil().setSp(11),
-                      color: Colors.grey,
+                      color: FB_MUTED,
                     ),
                   ),
                 ),
@@ -197,7 +203,7 @@ class NewsFeedCard extends StatelessWidget {
               text: 'View comments',
               fontSize: ScreenUtil().setSp(12),
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              color: FB_DARK_PRIMARY,
             ),
           ],
         ),

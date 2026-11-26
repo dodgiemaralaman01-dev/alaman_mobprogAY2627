@@ -1,11 +1,11 @@
 {
-    "name": "alaman_mobprog",
-    "short_name": "alaman_mobprog",
+    "name": "Den Den Mushi Book",
+    "short_name": "Den Den Mushi Book",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Den Den Mushi Book social app.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

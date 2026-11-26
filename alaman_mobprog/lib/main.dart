@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:alaman_mobprog/constants.dart';
 import 'package:alaman_mobprog/screens/home_screen.dart';
 import 'package:alaman_mobprog/screens/newsfeed_screen.dart';
 
@@ -17,7 +18,17 @@ class AlamanFacebook extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Facebook Replication',
+          title: 'Den Den Mushi Book',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: FB_PRIMARY,
+              primary: FB_PRIMARY,
+              secondary: FB_SECONDARY,
+              surface: FB_SURFACE,
+            ),
+            scaffoldBackgroundColor: FB_TEXT_COLOR_WHITE,
+            dividerColor: FB_LIGHT_PRIMARY,
+          ),
           initialRoute: '/home',
           routes: {
             '/newsfeed': (context) => const NewsFeedScreen(),
