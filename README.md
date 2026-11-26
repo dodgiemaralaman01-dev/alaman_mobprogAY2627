@@ -30,3 +30,19 @@ To make the image display dynamic, I used an if (hasImage) condition inside the 
         
 Through this implementation, I learned how to use conditional rendering in Flutter to create flexible and reusable widgets. It also makes the newsfeed more organized because each post can have an image or no image depending on the provided data.
 
+
+# Lab Activity 2A: List Widgets
+
+# Laboratory Discussion
+
+I built the posts and notifications from structured lists so each item’s content can be managed separately from its layout. The newsfeed uses a post list rendered with `ListView.builder`. Each post has its own author, text, like count, date, and image setting. This makes it straightforward to add posts without repeating the card layout. Notifications are also stored as a list and displayed with `ListView.separated`, which keeps their layout consistent and adds separators automatically.
+
+I completed the enhancements by making the AppBar title follow the selected page, adding a Profile item and screen to the bottom navigation, renaming the app to **Den Den Mushi Book**, and applying an ocean-blue, pirate-red, straw-hat-gold, and parchment color palette.
+
+## Difficulties and how I addressed them
+
+- **Showing the notification test page:** I needed to connect the notification screen to the page navigation so it could be reached from the bottom navigation and by swiping.
+
+- **Showing profiles and post images:** The code referenced `.png` files, but most of the provided assets were `.jpg`. I updated the paths to match the actual filenames and corrected the Nico Robin profile filename mismatch.
+
+- **Finding where to change the app name:** The name appears in several places, including the Flutter app title, the in-app AppBar, and platform-specific display settings. I updated the visible names while leaving technical package identifiers unchanged.
